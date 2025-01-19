@@ -16,9 +16,9 @@ return new class extends Migration {
             $table->integer('workout_duration');
             $table->integer('calories_burn');
             $table->string('status')->default('Done');
-            $table->unsignedBigInteger('id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
-            $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
         });
     }
 
